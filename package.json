@@ -1,0 +1,23 @@
+{
+  "name": "riot-toolbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfinitePixel/riot-toolbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InfinitePixel/riot-toolbox/issues"
+  },
+  "homepage": "https://github.com/InfinitePixel/riot-toolbox#readme",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "riot": "^3.7.0"
+  }
+}
