@@ -7,7 +7,9 @@
 <script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-image-grid.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-img-button.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-info-box.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-article-preview/rtb-article-preview.tag"></script>
 
+<link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link rel="stylesheet" href="/demo/gridism.css"></link>
 
@@ -101,6 +103,12 @@
         <h4>Image Grid</h4>
         <div class="unit whole">
           <rtb-image-grid data={splitArr} message={message}></rtb-image-grid>
+        </div>
+      </div>
+      <div class="component grid">
+        <h4>Article Preview</h4>
+        <div class="unit whole">
+          <rtb-article-preview data={articlePreview} title="New York City"></rtb-article-preview>
         </div>
       </div>
     </div>
@@ -214,6 +222,14 @@
     this.splitArr = [];
     for(var i = 0; i < this.array.length; i += 4) {
       this.splitArr.push(this.array.slice(i, 4 + i))
+    }
+
+    this.articlePreview = {
+      thumbnail: "http://genheration.com/wp-content/uploads/2016/04/New-York-City-Skyline.jpg",
+      link: "#",
+      dateLink: "#",
+      date: "September 21st, 2017",
+      body: "The Big Apple, The City That Never Sleeps, Gotham: whatever its name, New York City has something for every taste and every traveler. From incredible art galleries and museums to some of the world's best restaurants, New York's many offerings are well known to most visitors. But to explore the real New York, the vibrant, charming, and predictably unpredictable city that engenders such passion among locals and envy among visitors, it helps to have an insider's perspective. Which sexy speakeasies do native New Yorkers actually go to on the Lower East Side? Where do Brooklynites grab coffee during an afternoon spent wandering Cobble Hills' brownstone-lined streets? T+L's New York City travel guide offers a curated, insider-approved list of the best things to do, drink, eat, and shop (not to mention where to stay) in each of the city's distinct neighborhoods."
     }
 
 
