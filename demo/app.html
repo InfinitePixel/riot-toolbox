@@ -4,7 +4,12 @@
 <script src="/src/tags/rtb-sample.tag" type="riot/tag"></script>
 <script src="/src/tags/rtb-image-row/rtb-image-row.tag" type="riot/tag"></script>
 <script src="/src/tags/rtb-text-block/rtb-text-block.tag" type="riot/tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-image-grid.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-img-button.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-info-box.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-article-preview/rtb-article-preview.tag"></script>
 
+<link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link rel="stylesheet" href="/demo/gridism.css"></link>
 
@@ -94,6 +99,18 @@
           </rtb-text-block>
         </div>
       </div>
+      <div class="component grid">
+        <h4>Image Grid</h4>
+        <div class="unit whole">
+          <rtb-image-grid data={splitArr} message={message}></rtb-image-grid>
+        </div>
+      </div>
+      <div class="component grid">
+        <h4>Article Preview</h4>
+        <div class="unit whole">
+          <rtb-article-preview data={articlePreview} title="New York City"></rtb-article-preview>
+        </div>
+      </div>
     </div>
 
     this.images = [
@@ -102,6 +119,118 @@
       {'url': "/demo/images/oppenheimer.png"},
       {'url': "/demo/images/oracle.png"},
     ]
+
+    this.array = [
+      {
+        img: "http://www.bacancytechnology.com/images/atomized_logo.png",
+        title: "ATOMIZED",
+        desc: "Atomized is designed to connect your team, content and marketing apps with one view. The purpose of this application is to make visual marketing calendars for brands and agencies. Whether you’re working on the marketing communications calendar, an editorial calendar, brand planning calendar or publishing calendar, this application has got you covered. There is no more requirement of spreadsheets and workarounds for creative reviews and campaign planning. Making use of this application, you can edit your marketing calendar online and connect your other software and activities across teams.",
+        platforms: "Ruby On Rails",
+        industries: "Marketing",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/next_logo.png",
+        title: "NEXT STAGE PURPOSE",
+        desc: "Next Stage Purpose believes in helping people to live purposeful lives. Everything the organization does is based on meaning and purpose. It is a web-based, scalable tool that is scientifically proven to increase purpose and happiness. Next Stage Purpose incorporates all the elements that empirical research shows fosters purpose in life. In addition to the online purpose discovery app. Purposes Inc. also offers one-on-one coaching opportunities in purpose discovery. Coaching certification and training is also offered for professionals in the fields of coaching, career counseling, financial planning and psychology who would like to become certified as a Next Stage Purpose Coach.",
+        platforms: "Ruby On Rails",
+        industries: "Health Care",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/gobble_logo.png",
+        title: "GOBBLE",
+        desc: "Gobble is a weekly dinner service that delivers farm fresh 10-minute gourmet dinner kits to customers in CA, AZ, WA, OR, UT, ID, & NV. With the ability to be cooked in 3 easy steps and often times with only 1 pan, Gobble dinner kits are perfect for the kitchen-averse couples and uber-busy professional families who want to spend more time together around the table and less time shopping, chopping, and cleaning up. Gobble’s executive chef prepares new menus weekly that cater to every diet & lifestyle and the app’s personal dashboard allows families to easily customize their menus each week. Tested for quality, authenticity, accuracy and professional delivery.",
+        platforms: "Ruby On Rails",
+        industries: "Food",
+        techHighlights: []
+      },
+      {
+        img: "http://c4lpt.co.uk/top100tools/wp-content/uploads/2012/12/tumblr.png",
+        title: "TUMBLR",
+        desc: "Tumblr is a microblogging and social networking website founded by David Karp in 2007, and owned by Oath Inc. The service allows users to post multimedia and other content to a short-form blog.",
+        platforms: "Ruby On Rails",
+        industries: "Blogging",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/stericycle_logo.png",
+        title: "STERICYCLE",
+        desc: "Stericycle protects what matters. From medical waste and document destruction to sustain services and compliance solutions, the Stericycle team has been serving customers since 1989. Stericycle Communication Solution’s (SCS) is a value-based outcomes app that provides information about your organization’s potential to enhance revenue and reduce costs.",
+        platforms: "Ruby On Rails",
+        industries: "Health Care",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/ammabox_logo.png",
+        title: "AMMABOX",
+        desc: "The Ammabox application is designed to build a win-win situation where customers get access to great deals on the goods and services they love, and top vendors build their businesses through exposure to new customers. The goal of this application is to build a strong community that leverages the Ammabox platform to save money and build business! Ammabox provides a trusted, platform for great deals on food, entertainment, shopping, healthcare, and more for you to enjoy and share with your friends. It helps local and national businesses to grow by introducing them to new high-quality customers.",
+        platforms: "Ruby On Rails",
+        industries: "Coupon Application",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/earningscast_logo.png",
+        title: "EARNINGSCAST",
+        desc: "Earningscast is a web application designed with one simple motto manage, discuss and share. This application is developed to manage all your earnings calls and more. The core purpose of this application is to help investors be better informed with easier access to company conference calls and also engage in meaningful commentary around the call.",
+        platforms: "Ruby On Rails",
+        industries: "Communication",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/game_roster_logo.png",
+        title: "GAMEROSTER",
+        desc: "Game Roster believes online games are more fun with great friends, reliable players that share common interests, and tight knit communities where members are more committed because they care. Game Roster helps you find those players and build those communities. Start coordinating games and find players as it is one of the trusted sites for all your games.",
+        platforms: "Ruby On Rails",
+        industries: "Gaming",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/film_logo.png",
+        title: "FILM SKILLET",
+        desc: "Film Skillet is the perfect place to promote your independent film. It is an international community of filmmakers and enthusiasts promoting quality independent films from around the world. Not only is Film Skillet a great place for networking, but it is also a great place to watch films. If you like drama, comedy, science fiction, horror, documentaries or animations, you’re going to love Film Skillet. Film Skillet is a one stop shop for aspiring filmmakers to promote their films to the world.",
+        platforms: "Ruby On Rails",
+        industries: "Movie",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/aftermark.png",
+        title: "RELAXIMO",
+        desc: "Aftermarket.pl is an internet domain marketplace that allows users to buy, sell, and auction domains. Aftermarket.pl currently only supports Polish (.pl) and European Union (.eu) domains. The Aftermarket.pl API allows developers to automate many of the actions frequently taken by domain buyers and sellers on their site. Making use of the API, users can set up notifications, automate transactions such as listing or selling domains and check buyer/seller ratings. The company is offering SOAP-based API at free of cost; however, they charge a fee for actions such as selling, transferring, renewing, or registering domains.",
+        platforms: "Ruby On Rails",
+        industries: "Messaging System",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/alpine_logo.png",
+        title: "ALPINE",
+        desc: "Alpine is a mobile media innovation company that provides you an enjoyable car lifestyle. The organization offers a premium-quality driving experience, support, enjoyment and entertainment to exceed your expectations. Alpine has been developed to offer unique products and services to add value and enjoyment to the driving experience to its valuable customers.",
+        platforms: "Ruby On Rails",
+        industries: "Product QA",
+        techHighlights: []
+      },
+      {
+        img: "http://www.bacancytechnology.com/images/agsmart_logo.png",
+        title: "AGSMARTS",
+        desc: "AgSmarts is a precision Ag technology that is designed to offer moisture-sensing technology, predictive analytics and irrigation equipment automation that collectively represent a revolution in data-driven agriculture. AgSmarts’ platform combines software and hardware into a versatile suite of tools that real producers and their consultants can use today in the struggle to preserve resources, control costs and maximize yield.",
+        platforms: "Ruby On Rails",
+        industries: "Agriculture",
+        techHighlights: []
+      }
+    ];
+
+    this.splitArr = [];
+    for(var i = 0; i < this.array.length; i += 4) {
+      this.splitArr.push(this.array.slice(i, 4 + i))
+    }
+
+    this.articlePreview = {
+      thumbnail: "http://genheration.com/wp-content/uploads/2016/04/New-York-City-Skyline.jpg",
+      link: "#",
+      dateLink: "#",
+      date: "September 21st, 2017",
+      body: "The Big Apple, The City That Never Sleeps, Gotham: whatever its name, New York City has something for every taste and every traveler. From incredible art galleries and museums to some of the world's best restaurants, New York's many offerings are well known to most visitors. But to explore the real New York, the vibrant, charming, and predictably unpredictable city that engenders such passion among locals and envy among visitors, it helps to have an insider's perspective. Which sexy speakeasies do native New Yorkers actually go to on the Lower East Side? Where do Brooklynites grab coffee during an afternoon spent wandering Cobble Hills' brownstone-lined streets? T+L's New York City travel guide offers a curated, insider-approved list of the best things to do, drink, eat, and shop (not to mention where to stay) in each of the city's distinct neighborhoods."
+    }
 
 
   </app>
