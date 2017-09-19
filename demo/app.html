@@ -2,6 +2,7 @@
 <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 
 <script src="/src/tags/rtb-sample.tag" type="riot/tag"></script>
+<script src="/src/tags/rtb-image-row/rtb-image-row.tag" type="riot/tag"></script>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link rel="stylesheet" href="/demo/gridism.css"></link>
@@ -11,6 +12,14 @@
     margin: 0px;
     background-color: #f5f5f5;
     font-family: 'Roboto', sans-serif;
+  }
+
+  .component h4 {
+    background-color: #dbefd5;
+    color: #386f09;
+    padding: 10px;
+    padding-left: 27px;
+    font-weight: 800;
   }
 </style>
 
@@ -22,13 +31,35 @@
         margin: auto;
         width: 1000px;
         background-color: #fff;
-        padding: 20px;
+        padding: 20px 0px;
       }
+
+      .image-row .unit:nth-child(2) img {
+        margin-top: 11%;
+      }
+
     </style>
 
     <div class='main'>
-      <rtb-sample></rtb-sample>
+      <div class='component'>
+        <h4>Sample Component</h4>
+        <rtb-sample></rtb-sample>
+      </div>
+
+      <div class='component'>
+        <h4>Image Row</h4>
+        <rtb-image-row class="image-row" images={images}></rtb-image-row>
+      </div>
     </div>
+
+    this.images = [
+      {'url': "/demo/images/ericsson.png"},
+      {'url': "/demo/images/ciber.png"},
+      {'url': "/demo/images/oppenheimer.png"},
+      {'url': "/demo/images/oracle.png"},
+    ]
+
+
   </app>
 </script>
 
