@@ -8,6 +8,7 @@
 <script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-img-button.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-info-box.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-article-preview/rtb-article-preview.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-link-column/rtb-link-column.tag"></script>
 
 <link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -111,6 +112,12 @@
           <rtb-article-preview data={articlePreview} title="New York City"></rtb-article-preview>
         </div>
       </div>
+      <div class="component grid">
+        <h4>Link Column</h4>
+        <div class="unit one-quarter">
+          <rtb-link-column title="Events This Week" links={linkColumn}></rtb-link-column>
+        </div>
+      </div>
     </div>
 
     this.images = [
@@ -118,6 +125,33 @@
       {'url': "/demo/images/ciber.png"},
       {'url': "/demo/images/oppenheimer.png"},
       {'url': "/demo/images/oracle.png"},
+    ]
+
+    this.linkColumn = [
+      {
+        icon: "https://cdn4.iconfinder.com/data/icons/flat-icon-set/2133/flat_icons-graficheria.it-06.png",
+        url: "#",
+        eventTitle: "Tech In Motion Philly",
+        eventDate: "September 27th, 2017"
+      },
+      {
+        icon: "https://i.stack.imgur.com/Mmww2.png",
+        url: "#",
+        eventTitle: "Javascript Developers",
+        eventDate: "September 26th, 2017"
+      },
+      {
+        icon: "https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png",
+        url: "#",
+        eventTitle: "Node Developers",
+        eventDate: "September 25th, 2017"
+      },
+      {
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Ruby_logo.svg/2000px-Ruby_logo.svg.png",
+        url: "#",
+        eventTitle: "Ruby Developers",
+        eventDate: "September 24th, 2017"
+      }
     ]
 
     this.array = [
