@@ -9,6 +9,7 @@
 <script type="riot/tag" src="/src/tags/rtb-image-grid/rtb-info-box.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-article-preview/rtb-article-preview.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-link-column/rtb-link-column.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-article-grid/rtb-article-grid.tag"></script>
 
 <link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -116,6 +117,12 @@
         <h4>Link Column</h4>
         <div class="unit one-quarter">
           <rtb-link-column title="Events This Week" links={linkColumn}></rtb-link-column>
+        </div>
+      </div>
+      <div class="component grid">
+        <h4>Article Grid</h4>
+        <div class="unit whole">
+          <rtb-article-grid data={articleGrid}></rtb-article-grid>
         </div>
       </div>
     </div>
@@ -265,6 +272,29 @@
       date: "September 21st, 2017",
       body: "The Big Apple, The City That Never Sleeps, Gotham: whatever its name, New York City has something for every taste and every traveler. From incredible art galleries and museums to some of the world's best restaurants, New York's many offerings are well known to most visitors. But to explore the real New York, the vibrant, charming, and predictably unpredictable city that engenders such passion among locals and envy among visitors, it helps to have an insider's perspective. Which sexy speakeasies do native New Yorkers actually go to on the Lower East Side? Where do Brooklynites grab coffee during an afternoon spent wandering Cobble Hills' brownstone-lined streets? T+L's New York City travel guide offers a curated, insider-approved list of the best things to do, drink, eat, and shop (not to mention where to stay) in each of the city's distinct neighborhoods."
     }
+
+    this.articleGrid = [
+      {
+        img: "http://www.432parkavenue.com/assets/imgs/content/residences/1.jpg",
+        title: "432 Park Ave.",
+        body: "432 Park Avenue's luxury condominium building is the tallest residential tower in the hemisphere."
+      },
+      {
+        img: "http://diu1b3shwcsoac1j-zippykid.netdna-ssl.com/wp-content/uploads/2015/10/new-team-awe.sm_.jpeg",
+        title: "Meet Philly's Hottest Startup",
+        body: ""
+      },
+      {
+        img: "https://d1qmaht3zz5w6f.cloudfront.net/uploads/2016/11/startup-team.jpg",
+        title: "How Important Is a Good Team?",
+        body: ""
+      },
+      {
+        img: "http://www.startuberlin.com/wp-content/uploads/2014/08/startup-guide-berlin-team.jpg",
+        title: "How This Startup Rocked the Tech Industy",
+        body: ""
+      }
+    ];
 
 
   </app>
