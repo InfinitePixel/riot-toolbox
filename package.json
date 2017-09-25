@@ -1,7 +1,7 @@
 {
   "name": "riot-toolbox",
   "version": "1.0.0",
-  "description": "",
+  "description": "Open source component library for Riot.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/InfinitePixel/riot-toolbox.git"
   },
-  "author": "",
+  "author": "Taylor Horn",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/InfinitePixel/riot-toolbox/issues"
@@ -19,5 +19,6 @@
   "dependencies": {
     "jquery": "^3.2.1",
     "riot": "^3.7.0"
-  }
+  },
+  "devDependencies": {}
 }
