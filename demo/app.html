@@ -12,6 +12,7 @@
 <script type="riot/tag" src="/src/tags/rtb-article-grid/rtb-article-grid.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-search/rtb-search.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-recommended/rtb-recommended.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-subscribe/rtb-subscribe.tag"></script>
 
 <link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -136,6 +137,11 @@
         <h4>Article Column</h4>
         <div class="unit one-third">
           <rtb-recommended data={articleColumn}>Recommended Articles</rtb-recommended>
+        </div>
+      <div class='component grid'>
+        <h4>Subscribe Feature</h4>
+        <div class="unit two-fifths">
+          <rtb-subscribe data={subscribe}></rtb-subscribe>
         </div>
       </div>
     </div>
@@ -330,6 +336,14 @@
         author: "Taylor Horn"
       },
     ];
+
+    this.subscribe = {
+      heading: "Subscribe To Philly Tech Fix",
+      info: "Latest tech news delivered to you daily",
+      placeholder: "Enter Email Address",
+      button: "SUBSCRIBE"
+    }
+
 
 
   </app>
