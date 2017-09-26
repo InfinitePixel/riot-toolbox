@@ -10,6 +10,7 @@
 <script type="riot/tag" src="/src/tags/rtb-article-preview/rtb-article-preview.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-link-column/rtb-link-column.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-subscribe/rtb-subscribe.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-article-grid/rtb-article-grid.tag"></script>
 
 <link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -123,6 +124,12 @@
         <h4>Subscribe Feature</h4>
         <div class="unit two-fifths">
           <rtb-subscribe data={subscribe}></rtb-subscribe>
+        </div>
+       </div>
+      <div class="component grid">
+        <h4>Article Grid</h4>
+        <div class="unit whole">
+          <rtb-article-grid data={articleGrid}></rtb-article-grid>
         </div>
       </div>
     </div>
@@ -279,7 +286,29 @@
       placeholder: "Enter Email Address",
       button: "SUBSCRIBE"
     }
-
+    
+    this.articleGrid = [
+      {
+        img: "http://www.432parkavenue.com/assets/imgs/content/residences/1.jpg",
+        title: "432 Park Ave.",
+        body: "432 Park Avenue's luxury condominium building is the tallest residential tower in the hemisphere."
+      },
+      {
+        img: "http://diu1b3shwcsoac1j-zippykid.netdna-ssl.com/wp-content/uploads/2015/10/new-team-awe.sm_.jpeg",
+        title: "Meet Philly's Hottest Startup",
+        body: ""
+      },
+      {
+        img: "https://d1qmaht3zz5w6f.cloudfront.net/uploads/2016/11/startup-team.jpg",
+        title: "How Important Is a Good Team?",
+        body: ""
+      },
+      {
+        img: "http://www.startuberlin.com/wp-content/uploads/2014/08/startup-guide-berlin-team.jpg",
+        title: "How This Startup Rocked the Tech Industy",
+        body: ""
+      }
+    ];
 
   </app>
 </script>
