@@ -10,6 +10,7 @@
 <script type="riot/tag" src="/src/tags/rtb-article-preview/rtb-article-preview.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-link-column/rtb-link-column.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-article-grid/rtb-article-grid.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-share/rtb-share.tag"></script>
 
 <link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -123,6 +124,12 @@
         <h4>Article Grid</h4>
         <div class="unit whole">
           <rtb-article-grid data={articleGrid}></rtb-article-grid>
+        </div>
+      </div>
+      <div class="component grid">
+        <h4>Share Article</h4>
+        <div class="unit two-fifths">
+          <rtb-share data={share}></rtb-share>
         </div>
       </div>
     </div>
@@ -295,6 +302,29 @@
         body: ""
       }
     ];
+
+    this.share = [
+      {
+        company: "facebook",
+        icon: "fa fa-facebook"
+      },
+      {
+        company: "twitter",
+        icon: "fa fa-twitter"
+      },
+      {
+        company: "google-plus",
+        icon: "fa fa-google-plus"
+      },
+      {
+        company: "linkedin",
+        icon: "fa fa-linkedin"
+      },
+      {
+        company: "youtube",
+        icon: "fa fa-youtube-play"
+      }
+    ]
 
 
   </app>
