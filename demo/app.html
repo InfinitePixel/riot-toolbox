@@ -11,6 +11,9 @@
 <script type="riot/tag" src="/src/tags/rtb-link-column/rtb-link-column.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-article-grid/rtb-article-grid.tag"></script>
 <script type="riot/tag" src="/src/tags/rtb-search/rtb-search.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-recommended/rtb-recommended.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-subscribe/rtb-subscribe.tag"></script>
+<script type="riot/tag" src="/src/tags/rtb-share/rtb-share.tag"></script>
 
 <link rel="stylesheet" href="/demo/font-awesome-4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -130,6 +133,22 @@
         <h4>Search</h4>
         <div class="unit two-fifths">
           <rtb-search message="SEARCH"></rtb-search>
+      </div>
+      <div class='component grid'>
+        <h4>Article Column</h4>
+        <div class="unit one-third">
+          <rtb-recommended data={articleColumn}>Recommended Articles</rtb-recommended>
+        </div>
+      <div class='component grid'>
+        <h4>Subscribe Feature</h4>
+        <div class="unit two-fifths">
+          <rtb-subscribe data={subscribe}></rtb-subscribe>
+        </div>
+      </div>
+      <div class='component grid'>
+        <h4>Share Article</h4>
+        <div class="unit two-fifths">
+          <rtb-share data={share}></rtb-share>
         </div>
       </div>
     </div>
@@ -301,7 +320,59 @@
         title: "How This Startup Rocked the Tech Industy",
         body: ""
       }
+    ]
+    this.articleColumn = [
+      {
+        thumbnail: "https://www.gentlegiant.com/wp-content/uploads/2015/06/New-York.jpg",
+        title: "NYC Tech On the Rise",
+        author: "Taylor Horn"
+      },
+      {
+        thumbnail: "https://venturebeat.com/wp-content/uploads/2015/11/startup.jpg?fit=930%2C522&strip=all",
+        title: "Tech Startup",
+        author: "Taylor Horn"
+      },
+      {
+        thumbnail: "http://si.wsj.net/public/resources/images/BN-FI351_expert_G_20141102152646.jpg",
+        title: "Philly Startup Explodes",
+        author: "Taylor Horn"
+      },
+      {
+        thumbnail: "http://assets4.bigthink.com/system/idea_thumbnails/60118/size_1024/computer_code.jpg?1448159143",
+        title: "Coding the Future",
+        author: "Taylor Horn"
+      },
     ];
+
+    this.subscribe = {
+      heading: "Subscribe To Philly Tech Fix",
+      info: "Latest tech news delivered to you daily",
+      placeholder: "Enter Email Address",
+      button: "SUBSCRIBE"
+    }
+
+    this.share = [
+      {
+        company: "facebook",
+        icon: "fa fa-facebook"
+      },
+      {
+        company: "twitter",
+        icon: "fa fa-twitter"
+      },
+      {
+        company: "google-plus",
+        icon: "fa fa-google-plus"
+      },
+      {
+        company: "linkedin",
+        icon: "fa fa-linkedin"
+      },
+      {
+        company: "youtube",
+        icon: "fa fa-youtube-play"
+      }
+    ]
 
 
   </app>
